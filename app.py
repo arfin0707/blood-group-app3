@@ -7,7 +7,9 @@ import gdown
 import os
 
 # Update model link and name
-MODEL_URL = "https://drive.google.com/uc?id=1WjT7Qlwm5fh2Gs9o8hwwKljo1eX5Cuj5"  # 🔁 replace with your new Drive ID
+# MODEL_URL = "https://drive.google.com/uc?id=1WjT7Qlwm5fh2Gs9o8hwwKljo1eX5Cuj5"  # 🔁 replace with your new Drive ID ###ah19
+MODEL_URL = "https://drive.google.com/uc?id=1lGUbaudev71JDMJdTh829RAScQARH0Pi"  # 🔁 replace with your new Drive ID ###ih08
+# https://drive.google.com/file/d/1lGUbaudev71JDMJdTh829RAScQARH0Pi/view?usp=sharing
 MODEL_FILENAME = "convnext_model_1000.pth"
 
 @st.cache_resource
@@ -48,15 +50,15 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
     st.image(image, caption="Uploaded Image", use_container_width=True)
 
-    # transform = ConvNeXt_Tiny_Weights.DEFAULT.transforms()
+    transform = ConvNeXt_Tiny_Weights.DEFAULT.transforms()
     from torchvision import transforms
 
-    transform = transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406],
-                             [0.229, 0.224, 0.225])
-    ])
+    # transform = transforms.Compose([
+    #     transforms.Resize((224, 224)),
+    #     transforms.ToTensor(),
+    #     transforms.Normalize([0.485, 0.456, 0.406],
+    #                          [0.229, 0.224, 0.225])
+    # ])
 
     input_tensor = transform(image).unsqueeze(0)
 
