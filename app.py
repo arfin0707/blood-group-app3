@@ -7,7 +7,7 @@ import gdown
 import os
 
 # Update model link and name
-https://drive.google.com/uc?id=1WjT7Qlwm5fh2Gs9o8hwwKljo1eX5Cuj5
+MODEL_URL = "https://drive.google.com/uc?id=1WjT7Qlwm5fh2Gs9o8hwwKljo1eX5Cuj5"  # 🔁 replace with your new Drive ID
 MODEL_FILENAME = "convnext_model_1000.pth"
 
 @st.cache_resource
