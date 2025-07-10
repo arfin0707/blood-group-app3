@@ -5,8 +5,8 @@ from PIL import Image
 import gdown
 import os
 
-MODEL_URL = "https://drive.google.com/uc?id=1qtNsbahGSzvrEae9-XkSdUD48iDwOS0E"
-
+MODEL_URL = "https://drive.google.com/uc?id=1WjT7Qlwm5fh2Gs9o8hwwKljo1eX5Cuj5"
+# https://drive.google.com/file/d/1WjT7Qlwm5fh2Gs9o8hwwKljo1eX5Cuj5/view?usp=sharing
 @st.cache_resource
 def load_model():
     if not os.path.exists("model.pth"):
